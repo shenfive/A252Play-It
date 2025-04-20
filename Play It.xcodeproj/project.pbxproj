@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA2594E8210C82E70083D51C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2594E7210C82E70083D51C /* AVFoundation.framework */; };
 		BAE701E521085CF300E84465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE701E421085CF300E84465 /* AppDelegate.swift */; };
 		BAE701E721085CF400E84465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE701E621085CF400E84465 /* ViewController.swift */; };
 		BAE701EA21085CF400E84465 /* Play_It.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAE701E821085CF400E84465 /* Play_It.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA2594E7210C82E70083D51C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAE701E121085CF300E84465 /* Play It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Play It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE701E421085CF300E84465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE701E621085CF400E84465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2594E8210C82E70083D51C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA2594E6210C82E70083D51C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA2594E7210C82E70083D51C /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAE701D821085CF300E84465 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +93,7 @@
 				BAE701F921085CF600E84465 /* Play ItTests */,
 				BAE7020421085CF600E84465 /* Play ItUITests */,
 				BAE701E221085CF300E84465 /* Products */,
+				BA2594E6210C82E70083D51C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +207,11 @@
 				TargetAttributes = {
 					BAE701E021085CF300E84465 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					BAE701F521085CF600E84465 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -423,16 +440,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Play It/Play_It.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = "Play It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "idv.sjw.Play-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -441,16 +461,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Play It/Play_It.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = "Play It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "idv.sjw.Play-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
